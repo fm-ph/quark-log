@@ -1,5 +1,11 @@
 # [<img src="logo.png" alt="quark-log" width="200">](https://github.com/fm-ph/quark-log)
 
+[![build status][travis-image]][travis-url]
+[![stability][stability-image]][stability-url]
+[![npm version][npm-image]][npm-url]
+[![js-standard-style][standard-image]][standard-url]
+[![semantic-release][semantic-release-image]][semantic-release-url]
+
 Simple configurable logging module.
 
 ___This package is part of `quark` framework but it can be used independently.___
@@ -256,3 +262,14 @@ npm run test:coverage
 ## License
 
 MIT [License](LICENSE.md) © [Patrick Heng](http://hengpatrick.fr/) [Fabien Motte](http://fabienmotte.com/) 
+
+[travis-image]: https://img.shields.io/travis/fm-ph/quark-log/master.svg?style=flat-square
+[travis-url]: http://travis-ci.org/fm-ph/quark-log
+[stability-image]: https://img.shields.io/badge/stability-stable-brightgreen.svg?style=flat-square
+[stability-url]: https://nodejs.org/api/documentation.html#documentation_stability_index
+[npm-image]: https://img.shields.io/npm/v/quark-log.svg?style=flat-square
+[npm-url]: https://npmjs.org/package/quark-log
+[standard-image]: https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat-square
+[standard-url]: https://github.com/feross/standard
+[semantic-release-image]: https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg?style=flat-square
+[semantic-release-url]: https://github.com/semantic-release/semantic-release
