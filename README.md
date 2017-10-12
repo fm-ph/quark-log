@@ -21,6 +21,8 @@ ___This package is part of `quark` framework but it can be used independently.__
 
 ## Installation
 
+[![NPM](https://nodei.co/npm/quark-log.png)](https://www.npmjs.com/package/quark-log)
+
 ```sh
 npm install quark-log --save
 ```
