@@ -11,7 +11,7 @@
     "docs:clean": "del-cli docs/",
     "docs:deploy": "npm run docs && gh-pages -d docs/ -m 'docs: update'",
     "docs:serve": "documentation serve",
-    "test": "jest",
+    "test": "standard src/* && jest",
     "test:watch": "npm test -- --watch",
     "test:coverage": "jest --coverage",
     "prepublish": "npm test && npm run build",
