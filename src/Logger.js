@@ -166,7 +166,6 @@ class Logger {
 
   /**
    * Bind levels.
-   *
    * @private
    */
   _bindLevels () {
@@ -178,7 +177,6 @@ class Logger {
 
   /**
    * Bind a level.
-   *
    * @private
    *
    * @param {String} levelName Level name.
@@ -190,7 +188,6 @@ class Logger {
 
   /**
    * Level callback.
-   *
    * @private
    *
    * @param {String} levelName Level name.
@@ -217,7 +214,6 @@ class Logger {
 
   /**
    * Bind commands.
-   *
    * @private
    */
   _bindCommands () {
@@ -231,7 +227,6 @@ class Logger {
 
   /**
    * Apply registered plugins.
-   *
    * @private
    *
    * @param {String} levelName Level name.
@@ -275,7 +270,6 @@ class Logger {
 
   /**
    * Print a message.
-   *
    * @private
    *
    * @param {strin} levelName Level name.
@@ -346,7 +340,6 @@ class Logger {
 
   /**
    * Merge level and plugins styles.
-   *
    * @private
    *
    * @param {Object} levelStyles Level styles.
@@ -370,7 +363,6 @@ class Logger {
 
   /**
    * Parse styles to CSS.
-   *
    * @private
    *
    * @param {Object} styles Styles.
@@ -390,7 +382,6 @@ class Logger {
 
   /**
    * Parse plugins styles.
-   *
    * @private
    *
    * @param {Array} pluginsStyles Plugins styles.
@@ -411,7 +402,6 @@ class Logger {
 
   /**
    * Parse messages tags.
-   *
    * @private
    *
    * @param {Array} msgs Messages.
@@ -430,7 +420,6 @@ class Logger {
 
   /**
    * Sort messages.
-   *
    * @private
    *
    * @param {Array} msgs Messages.
@@ -455,7 +444,6 @@ class Logger {
 
   /**
    * Print self error message.
-   *
    * @private
    *
    * @param {String} msg Message.
