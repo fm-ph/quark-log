@@ -4,7 +4,9 @@ import { camelToKebab } from './utils'
  * Logger class.
  *
  * @class
+ *
  * @license https://opensource.org/licenses/MIT
+ *
  * @author Patrick Heng & Fabien Motte <hengpatrick.pro@gmail.com/contact@fabienmotte.com>
  *
  * @example
@@ -18,11 +20,41 @@ class Logger {
    * @constructor
    */
   constructor () {
+    /**
+     * @name enabled
+     * @type Boolean
+     * @private
+     */
     this._enabled = true
+
+    /**
+     * @type Object
+     * @private
+     */
     this._defaultsLevels = { log: {}, info: {}, warn: {}, error: {} }
+
+    /**
+     * @type Object
+     * @private
+     */
     this._levels = { log: {}, info: {}, warn: {}, error: {} }
+
+    /**
+     * @type Array
+     * @private
+     */
     this._commands = ['group', 'time']
+
+    /**
+     * @type Object
+     * @private
+     */
     this._plugins = {}
+
+    /**
+     * @type Function|null
+     * @private
+     */
     this._logHandler = null
 
     this._bindLevels()
@@ -134,6 +166,8 @@ class Logger {
 
   /**
    * Bind levels.
+   *
+   * @private
    */
   _bindLevels () {
     for (const levelName in this._levels) {
@@ -145,6 +179,8 @@ class Logger {
   /**
    * Bind a level.
    *
+   * @private
+   *
    * @param {String} levelName Level name.
    * @param {Object} levelOptions Level options.
    */
@@ -154,6 +190,8 @@ class Logger {
 
   /**
    * Level callback.
+   *
+   * @private
    *
    * @param {String} levelName Level name.
    * @param {Object} levelOptions Level options.
@@ -179,6 +217,8 @@ class Logger {
 
   /**
    * Bind commands.
+   *
+   * @private
    */
   _bindCommands () {
     for (let i = 0, l = this._commands.length; i < l; i++) {
@@ -191,6 +231,8 @@ class Logger {
 
   /**
    * Apply registered plugins.
+   *
+   * @private
    *
    * @param {String} levelName Level name.
    * @param {Object} levelOptions Level options.
@@ -233,6 +275,8 @@ class Logger {
 
   /**
    * Print a message.
+   *
+   * @private
    *
    * @param {strin} levelName Level name.
    * @param {Object} levelOptions Level options.
@@ -303,6 +347,8 @@ class Logger {
   /**
    * Merge level and plugins styles.
    *
+   * @private
+   *
    * @param {Object} levelStyles Level styles.
    * @param {Array} pluginsStyles Plugins styles.
    *
@@ -325,6 +371,8 @@ class Logger {
   /**
    * Parse styles to CSS.
    *
+   * @private
+   *
    * @param {Object} styles Styles.
    *
    * @returns {String} Parsed styles.
@@ -342,6 +390,8 @@ class Logger {
 
   /**
    * Parse plugins styles.
+   *
+   * @private
    *
    * @param {Array} pluginsStyles Plugins styles.
    *
@@ -362,6 +412,8 @@ class Logger {
   /**
    * Parse messages tags.
    *
+   * @private
+   *
    * @param {Array} msgs Messages.
    *
    * @returns {Array} Parsed messages.
@@ -378,6 +430,8 @@ class Logger {
 
   /**
    * Sort messages.
+   *
+   * @private
    *
    * @param {Array} msgs Messages.
    *
@@ -401,6 +455,8 @@ class Logger {
 
   /**
    * Print self error message.
+   *
+   * @private
    *
    * @param {String} msg Message.
    */
