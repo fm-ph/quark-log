@@ -106,6 +106,15 @@ logger.reset()
 logger.log('Test') // Test
 ```
 
+#### Line break
+
+```js
+import { Logger } from 'quark-log'
+
+const logger = new Logger()
+logger.br()
+```
+
 ### Levels
 
 #### Defaults levels

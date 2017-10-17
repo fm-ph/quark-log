@@ -91,6 +91,16 @@ class Logger {
   }
 
   /**
+   * Line break.
+   *
+   * @returns {Logger} `this`
+   */
+  br () {
+    this._print('log', {}, '')
+    return this
+  }
+
+  /**
    * Add/modify a level.
    *
    * @param {String} name Level name.
@@ -273,15 +283,15 @@ class Logger {
    * @private
    *
    * @param {strin} levelName Level name.
-   * @param {Object} levelOptions Level options.
-   * @param {Array} msgs Messages.
-   * @param {Array} before Before middleware.
-   * @param {Array} after After middleware.
-   * @param {Array} pluginsStyles Plugins styles.
+   * @param {Object} [levelOptions={}] Level options.
+   * @param {Array} [msgs=[]] Messages.
+   * @param {Array} [before=[]] Before middleware.
+   * @param {Array} [after=[]] After middleware.
+   * @param {Array} [pluginsStyles={}] Plugins styles.
    *
    * @returns {Logger} `this`
    */
-  _print (levelName, levelOptions, msgs, before, after, pluginsStyles) {
+  _print (levelName, levelOptions = {}, msgs = [], before = [], after = [], pluginsStyles = {}) {
     let finalMsgs = []
     let globalStyles = []
 

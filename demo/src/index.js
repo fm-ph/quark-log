@@ -41,6 +41,8 @@ logger.bold('Test')
 
 logger.reset()
 
+logger.br()
+
 logger.plugin('namespace', plugins.namespace, { name: 'test', capitalize: false })
 logger.log('New namespace')
 
