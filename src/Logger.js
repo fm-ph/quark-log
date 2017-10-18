@@ -1,4 +1,4 @@
-import { camelToKebab } from './utils'
+import { camelToKebab, isBrowser } from './utils'
 
 /**
  * Logger class.
@@ -331,8 +331,20 @@ class Logger {
       finalMsgs.push(this._parseMsgTags(after).join(' '))
     }
 
+    finalMsgs = finalMsgs.join(' ')
+
+    if (!isBrowser()) {
+      finalMsgs = finalMsgs.replace(/%c/g, '')
+    }
+
     // Arguments
-    const args = [finalMsgs.join(' '), ...globalStyles, ...othersMsgs]
+    let args = [finalMsgs]
+
+    if (isBrowser()) {
+      args.push(...globalStyles, ...othersMsgs)
+    } else {
+      args.push(...othersMsgs)
+    }
 
     // Check console
     if (typeof console === 'undefined') {

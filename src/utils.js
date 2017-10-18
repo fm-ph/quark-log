@@ -19,3 +19,12 @@ export function camelToKebab (str) {
 export function capitalize (str) {
   return str.charAt(0).toUpperCase() + str.slice(1)
 }
+
+/**
+ * Check browser or Node environment.
+ *
+ * @returns {Boolean} True if running in browser, false otherwise.
+ */
+export function isBrowser () {
+  return !(typeof process !== 'undefined' && process.title === 'node')
+}
