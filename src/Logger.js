@@ -345,7 +345,11 @@ class Logger {
       console.log.apply(console, args)
     }
 
-    return this
+    if (levelName === 'error' || levelName === 'warn') {
+      return false
+    }
+
+    return true
   }
 
   /**
