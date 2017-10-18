@@ -7,7 +7,7 @@ import { camelToKebab } from './utils'
  *
  * @license https://opensource.org/licenses/MIT
  *
- * @author Patrick Heng & Fabien Motte <hengpatrick.pro@gmail.com/contact@fabienmotte.com>
+ * @author Patrick Heng & Fabien Motte <hengpatrick.pro@gmail.com / contact@fabienmotte.com>
  *
  * @example
  * const logger = new Logger()
