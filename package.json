@@ -56,11 +56,6 @@
     "semantic-release": "^8.2.0",
     "standard": "^10.0.3"
   },
-  "browserify": {
-    "transform": [
-      "babelify"
-    ]
-  },
   "standard": {
     "parser": "babel-eslint",
     "ignore": [
